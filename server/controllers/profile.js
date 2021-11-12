@@ -24,7 +24,7 @@ export const createProfile = async (req, res) => {
     await newProfile.save();
     res.status(201).json(newProfile);
   } catch (error) {
-    res.status(404).json({ message: error.message });
+    res.status(409).json({ message: error.message });
   }
 };
 
