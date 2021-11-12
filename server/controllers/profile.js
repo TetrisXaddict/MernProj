@@ -1,7 +1,11 @@
-export const getProfiles = (req, res) => {
+export const getAllProfiles = async (req, res) => {
   try {
     const foundProfiles = profile.find();
-  } catch (error) {}
+
+    res.status(200).json(foundProfiles);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
 };
 
 export const getProfile = (req, res) => {
