@@ -1,9 +1,9 @@
-import { mongoose } from "mongoose";
+import mongoose from "mongoose";
 
 const profileSchema = mongoose.Schema({
   name: String,
   description: String,
-  picture: Image,
+  //picture: Image,
   section: {
     type: String,
     default: "no input recieved",
