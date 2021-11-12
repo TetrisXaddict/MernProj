@@ -1,9 +1,15 @@
 import express from "express";
-import { getProfiles } from "../controllers/profile.js";
+import {
+  getProfiles,
+  getProfile,
+  createProfile,
+} from "../controllers/profile.js";
 import student from "../models/profile.js";
 
 const router = express.Router();
 
-router.get("/", getProfiles);
+router.get("/", getProfiles); //get all profiles
+router.get("/", getProfile); // get singular profile
+router.post("/", createProfile); //create a profile
 
 export default router;
